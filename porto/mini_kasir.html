@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Fahd Portfolio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 6px;
+            width: 500px; /* w-96 = 384px */
+            height: 500px; /* Buat tinggi sama dengan lebar */
+            margin: 10px; /* Beri jarak dari navbar */
+        }
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 1 / 3 / 2 / 4; }
+        .div4 { grid-area: 2 / 1 / 3 / 2; }
+        .div5 { grid-area: 2 / 2 / 3 / 3; }
+        .div6 { grid-area: 2 / 3 / 3 / 4; }
+        .div7 { grid-area: 3 / 1 / 4 / 2; }
+        .div8 { grid-area: 3 / 2 / 4 / 3; }
+        .div9 { grid-area: 3 / 3 / 4 / 4; }
+
+        .parent img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Pastikan gambar mengisi ruang tanpa distorsi */
+            border-radius: 4px; /* Sedikit rounded corner */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bayangan halus */
+        }
+
+        @media (max-width: 640px) {
+            .parent {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-sky-950 bg-opacity-90 shadow-md z-50">
+        <div class="container mx-auto p-6">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-sky-50">Raja Fahd</div>
+                <div class="text-xl md:flex space-x-8">
+                    <a href="../index.html" class=" text-sky-50 hover:text-sky-300">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <!-- Grid Container -->
+        <div class="parent">
+            <div class="div1 rounded-sm"><img src="../assets/mini_kasir/dashboard.png" loading="lazy" alt="dashboard" class="hover:scale-95 transition-transform"></div>
+            <div class="div2 rounded-sm"><img src="../assets/mini_kasir/postman.png" loading="lazy" alt="postmanr" class="hover:scale-95 transition-transform"></div>
+            <div class="div3 rounded-sm"><img src="../assets/mini_kasir/kasir.png" loading="lazy" alt="kasir" class="hover:scale-95 transition-transform"></div>
+            <div class="div4 rounded-sm"><img src="../assets/mini_kasir/endpoint.png" loading="lazy" alt="endpoint" class="hover:scale-95 transition-transform"></div>
+            <div class="div5 rounded-sm"><img src="../assets/mini_kasir/pelanggan.png" loading="lazy" alt="pelanggan" class="hover:scale-95 transition-transform"></div>
+            <div class="div6 rounded-sm"><img src="../assets/mini_kasir/database.png" loading="lazy" alt="database" class="hover:scale-95 transition-transform"></div>
+            <div class="div7 rounded-sm"><img src="../assets/mini_kasir/barang.png" loading="lazy" alt="barang" class="hover:scale-95 transition-transform"></div>
+            <div class="div8 rounded-sm"><img src="../assets/mini_kasir/model.png" loading="lazy" alt="model" class="hover:scale-95 transition-transform"></div>
+            <div class="div9 rounded-sm"><img src="../assets/mini_kasir/transaksi.png" loading="lazy" alt="transaksi" class="hover:scale-95 transition-transform"></div>
+        </div>
+        <div class="md:w-2/3 md:pl-12">
+            <p class="text-sky-950 text-4xl bg-sky-100 bg-opacity-80 rounded-md p-3">MiniKasir is my first project in creating a backend system based on node.js and express.js. This web frontend is simple just as an implementation of the RESTFULL API that I have created, all APIs have been tested in "postman" and all endpoints are successfully accessed.</p>
+        </div>
+    </div>
+
+    <footer class="bg-sky-950 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Raja Fahd. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/RajaFahd" class="text-gray-300 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/raja-fahd-saefudin-48729032b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="https://www.instagram.com/rajafahd_s?igsh=b2h3ajVmdDZtZ2Rq" class="text-gray-300 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="https://wa.me/6282262266094" class="text-gray-300 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

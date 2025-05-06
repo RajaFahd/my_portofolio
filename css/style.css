@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/background.jpg');
+    background-attachment: fixed; /* Ini yang membuat background tetap */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+  
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Animation for mobile menu */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Untuk mobile */
+@media (max-width: 768px) {
+    #typed-text {
+        font-size: 2.5rem; /* Ukuran lebih kecil di mobile */
+    }
+}
+#typed-text {
+    border-right-color: #3b82f6; /* Warna biru */
+}
+/* Animasi untuk section yang akan muncul saat scroll */
+.hidden-div {
+    opacity: 0;
+    transform: translateY(80px); /* Geser lebih jauh ke bawah */
+    filter: blur(5px); /* Efek blur */
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.animate-fade-in-up {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
